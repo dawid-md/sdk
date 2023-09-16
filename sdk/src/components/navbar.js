@@ -13,8 +13,8 @@ export const Navbar = () => {
     return(
         <>
             <div>
-                <Link to="/">Home</Link>
-                <Link to="/login">Login</Link>
+                <Link to="/">Home </Link>
+                {!user && <Link to="/login">Login</Link>}
             </div>
 
             <div>
@@ -23,7 +23,7 @@ export const Navbar = () => {
                 {user && (
                 <>
                     <p>{user?.displayName}</p>  
-                    <img src={user?.photoURL || ""} width={100} height={100}  referrerPolicy="no-referrer" />   {/*referrerPolicy tag get rids of broken image tag so "user &&..." is not necessary anymore"*/}
+                    <img src={user?.photoURL || ""} width={100} height={100} referrerPolicy="no-referrer" />   {/*referrerPolicy tag get rids of broken image tag so "user &&..." is not necessary anymore"*/}
                     <button onClick={signUserOut}> Log Out</button>
                 </>
                 )}
