@@ -15,6 +15,7 @@ export const Navbar = () => {
             <div>
                 <Link to="/">Home </Link>
                 {!user && <Link to="/login">Login</Link>}
+                {user && <Link to="/createpost">Create Post</Link>}
             </div>
 
             <div>
