@@ -12,10 +12,11 @@ export const Navbar = () => {
 
     return(
         <>
-            <div>
+            <div className="">
                 <Link to="/">Home </Link>
-                {!user && <Link to="/login">Login</Link>}
-                {user && <Link to="/createpost">Create Post</Link>}
+                {!user && <Link to="/login">Login </Link>}
+                {!user && <Link to="/register">Register </Link>}
+                {user && <Link to="/createpost">Create Post </Link>}
             </div>
 
             <div>
