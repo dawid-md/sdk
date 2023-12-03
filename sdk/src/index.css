@@ -21,3 +21,7 @@ body{
 a{
   color: rgb(218, 165, 30);
 }
+
+p{
+  line-height: 2rem;
+}
